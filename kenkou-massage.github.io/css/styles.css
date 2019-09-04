@@ -51,11 +51,6 @@ table {
 
 a {
     text-decoration: none;
-    transition: .3s;
-}
-
-a:hover {
-    opacity: .5;
 }
 
 .only-pc {
@@ -104,11 +99,17 @@ p {
     font-weight: bold;
 }
 
-.header_nav ul li a {
+.header_nav ul li {
     color: #000;
+    transition: .3s;
 }
 
-.scrolled ul li a {
+.header_nav ul li:hover {
+    opacity: .5;
+    cursor: pointer;
+}
+
+.scrolled ul li {
     color: #333333;
     text-shadow: none;
 }
@@ -116,13 +117,16 @@ p {
 .goTop{
     overflow: hidden;
     position: fixed;
-    font-size: 40px;
     z-index: 10;
     opacity: 0;
     -webkit-transition: .3s;
     transition: .3s;
     top: 87%;
     left: 92%;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(145, 176, 41);
 }
 
 .goTop.scrolled {
@@ -136,8 +140,16 @@ p {
 }
 
 .arrow {
-    width: 60px;
-    height: 60px;
+    width: 12px;
+    height: 12px;
+    border: 1px solid;
+    border-color: #fff #fff transparent transparent;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 27px;
+    bottom: 0;
+    right: 0;
+    left: 23px;
 }
 
 .sec1, .sec3, .sec5 {
@@ -317,11 +329,15 @@ p {
     .goTop {
         top: 90%;
         left: 83%;
+        width: 50px;
+        height: 50px;
     }
 
     .arrow {
-        width: 50px;
-        height: 50px;
+        width: 10px;
+        height: 10px;
+        top: 23px;
+        left: 19px;
     }
 
     .header_nav ul {
@@ -329,17 +345,12 @@ p {
         width: 400px;
     }
 
-    /* .main-title {
-        height: 200px;
-    }
-    
-    .main-title h1 {
-        font-size: 30px;
-        padding-top: 100px;
-    } */
-
     .con-layout_sp {
         margin-top: 15px!important;
+    }
+
+    .main-title h1 {
+        font-size: 30px;
     }
 }
 
